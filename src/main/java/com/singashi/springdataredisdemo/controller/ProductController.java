@@ -2,12 +2,14 @@ package com.singashi.springdataredisdemo.controller;
 import com.singashi.springdataredisdemo.entity.Product;
 import com.singashi.springdataredisdemo.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
 @RequestMapping("/product")
+@EnableCaching
 public class ProductController {
 
     @Autowired

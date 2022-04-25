@@ -38,6 +38,7 @@ public class ProductDao {
 
     //delete a product
     public  String deleteProduct(int id){
+        logger.info("Deleting for id : {} Inside deleteProduct() of ProductDao.class", id);
         template.opsForHash().delete(HASH_KEY, id);
         return "product-removed";
     }
